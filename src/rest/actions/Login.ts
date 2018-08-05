@@ -1,0 +1,36 @@
+import { InstanceData } from "../spec";
+import getSecurityData from "./GetSecurityData";
+import { LOGIN_ROUTE, superagent, FAKE_HEADERS } from "../Constants";
+
+/**
+ * Initiates an authenticated session with Edsby.
+ * 
+ * @param instanceData the Edsby instance data
+ * @param username the Edsby username
+ * @param password the Edsby password
+ */
+export default async function login(instanceData: InstanceData, username: string, password: string) {
+    const securityData = await getSecurityData(instanceData);
+
+    const body = {
+        ...securityData,
+        crypttype: "LeanLDAP",
+        "login-userid": username,
+        "login-password": password,
+        "login-host": instanceData.host,
+        remember: 1
+    };
+
+    const query = {
+        xds: "loginform",
+        editable: true
+    };
+
+    const response = await superagent.post(LOGIN_ROUTE(instanceData))
+                        .type('form')
+                        .query(query)
+                        .set(FAKE_HEADERS(instanceData))
+                        .send(body);
+
+    return response as any as void;
+}

@@ -1,0 +1,32 @@
+{
+  "name": "edsby",
+  "version": "1.0.0",
+  "description": "A library for interacting with the Edsby API",
+  "main": "out/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EricRabil/Edsby.js.git"
+  },
+  "keywords": [
+    "lms",
+    "edsby"
+  ],
+  "author": "Eric Rabil <ericjrabil@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EricRabil/Edsby.js/issues"
+  },
+  "homepage": "https://github.com/EricRabil/Edsby.js#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "readline-sync": "^1.4.9",
+    "superagent": "^3.8.3"
+  },
+  "devDependencies": {
+    "@types/readline-sync": "^1.4.3",
+    "@types/superagent": "^3.8.3"
+  }
+}
