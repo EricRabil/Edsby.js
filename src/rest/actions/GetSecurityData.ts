@@ -1,5 +1,5 @@
-import { InstanceData, APIResponse, CryptData } from "../spec";
-import { NODE_META, FAKE_AGENT, superagent, FAKE_HEADERS } from "../Constants";
+import { FAKE_HEADERS, NODE_META, superagent } from '../Constants';
+import { APIResponse, CryptData, InstanceData } from '../spec';
 
 export interface SecurityData {
     sauthdata: string;
