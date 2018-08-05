@@ -6,7 +6,7 @@ This project aims to be a fully-fledged library for interacting with the Edsby A
 1. Run `yarn` or `npm install`
 
 ## Running
-Right now the project is developed as a demo.
+Right now the project is developed as a demo. Running it will be interactive and you'll be able to test the project.
 
 1. To compile it, execute `npm run build` or `yarn build`
 2. To run, execute `npm run run` or `yarn run`
