@@ -2,7 +2,7 @@ import { InstanceData } from "../spec";
 import { superagent } from "../Constants";
 
 export const OPEN_SESAME_REGEX = /openSesame\(({(?:(?:"[a-z]*":"?\w*"?),?)*})\)/g;
-export const HOST_REGEX = /https:\/\/(\w+).edsby.com/g;
+export const HOST_REGEX = /https:\/\/(.+\.edsby\.com)/g;
 
 /**
  * Gets the instance metadata at the given host

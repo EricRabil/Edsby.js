@@ -22,7 +22,7 @@ export default async function getSecurityData(instanceData: InstanceData): Promi
     const apiResponse: APIResponse<[CryptData]> = response.body;
     
     return {
-        sauthdata: apiResponse.slices[0].data.sauthdata,
-        _formkey: apiResponse.slices[0]._formkey
+        _formkey: apiResponse.slices[0]._formkey,
+        sauthdata: apiResponse.slices[0].data.sauthdata
     }
 }
